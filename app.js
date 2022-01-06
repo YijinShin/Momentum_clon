@@ -1,13 +1,13 @@
-const age = parseInt(prompt("How old are you?"));
-// age에 숫자가 아닌 다른것을 입력하면 parseInt 결과가 NaN이 나옴. 
-if (isNaN(age)){ 
-    console.log("Please write number");
-    
-}else if (age < 18 || ){
-    console.log("You are too young.")
-}
-else{
-    console.log("You can drink");
-}
+const title = document.querySelector(".hello h1"); 
 
+console.dir(title);
 
+function handleTitleClick(){
+    console.log("title was clicked");
+    title.style.color = "red";
+}
+function handleTitleMouseenter(){
+    console.log("mouseenter");
+}
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleTitleMouseenter);
