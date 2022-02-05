@@ -1,16 +1,14 @@
-const h1 = document.querySelector("div.hello:first-child h1");  
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
+function onLoginSubmit(tomato){  //함수가 하나의 argument를 받도록하고, 그걸 js에 넘겨주고잇다. 
+    tomato.preventDefault(); // submit해도 페이지 새로고침 안되도록함.
+    console.log(loginInput.value);
 
-
-function handleTitleClick(){
-    //const clickedClass = "clicked";
-    //if(h1.classList.contains(clickedClass)) 
-    //    h1.classList.remove(clickedClass);
-    //else h1.classList.add(clickedClass); // css에 선언해놓은 active class를 불러옴
-    //위의 조건을 toggle로 줄일수있다. 
-    h1.classList.toggle("clicked"); // 리스트에 있으면 제거하고, 없으면 추가함 
+    //const username = loginInput.value;
+    //console.log(username);
 }
 
-h1.addEventListener("click", handleTitleClick);
-//위와 같은 이야기인데 이렇게도 쓸 수 있다. title.onclick = handleTitleClick;
-//그래도 addEventListener을 써서 리스너를 붙이는게 나중에 remove도 가능해서 좋음 
+loginForm.addEventListener("submit",onLoginSubmit); // 엔터를 누르거나, 버튼을 누르면 발생 
+
+//onLoginSubmit(); // 이렇게 함수를 쓰면 
