@@ -1,6 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const greeting = document.querySelector("#greeting"); //id니까 #으로 검색
+const greeting = document.querySelector("h1#greeting"); //id니까 #으로 검색
 
 
 // 최대한 같은 string을 여러번 쓰지 않도록 
